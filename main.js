@@ -45,17 +45,7 @@ $(function(){
         $("#introsentencedate").delay(1500).animate({
             opacity:1
         },500)
-        $.ajax({
-            url:"./IntroductionSentence.txt",
-            success:function(data,status,request){
-                var lasttime=new Date(request.getResponseHeader('Last-Modified'));
-                var ltyaer=lasttime.getFullYear();
-                var ltmonth=lasttime.getMonth()+1;
-                var ltdate=lasttime.getDate();
-                $("#introsentencedate").html("更新日:"+ltyaer+"/"+ltmonth+"/"+ltdate);
-                console.log(lasttime);
-            }
-        });
+        
     }
 
     function setIntro(){
