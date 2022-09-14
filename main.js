@@ -11,12 +11,6 @@ $(function(){
         var modmonth = modified.getMonth() + 1;
         var moddate = modified.getDate();
         $("#updateday").html(modyear+"/"+modmonth+"/"+moddate);
-    }    
-
-    function jump(){    
-        $('html, body').animate({
-            scrollTop: 0
-        }, 600, 'easeInOutQuart');
     }
 
     function checkSize(){
@@ -44,8 +38,7 @@ $(function(){
         },500);
         $("#introsentencedate").delay(1500).animate({
             opacity:1
-        },500)
-        
+        },500);
     }
 
     function setIntro(){
@@ -121,6 +114,12 @@ $(function(){
 
         $(window).resize(function() {
             checkSize();            
+        });
+
+        $("#toplabel1").on("click",function(){
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500, 'easeInOutExpo');
         });
     }
 
