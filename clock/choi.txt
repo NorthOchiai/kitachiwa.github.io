@@ -1,0 +1,73 @@
+body{
+    background-image: url("IMG_20220310_152843-edited30pSmh.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.outerBox1{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.50);
+    text-align: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: "M PLUS Rounded 1c";
+}
+
+.itemBox{
+    position: relative;
+    z-index: 1;
+    color:#ffffff;
+    font-size:25px;
+}
+.itemBox::before{
+    transform: skewX(30deg);
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left: 7%;
+    right:0;
+    width: 86%;
+    background-color:#2c4c71;
+    z-index: -1;
+}
+.itemBox::after{
+    transform: skewX(-10deg);
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color:#295886;
+    z-index: -2;
+}
+
+.timeLabel{
+    color:#ffffff;
+    font-size:60px;
+}
+.timeLabel::before{
+    content:"";
+}
+
+@media screen and (min-width:500px) {       /*PC*/
+    body{
+        background-image: url("IMG_20220310_152843-edited35p.jpg");    
+    }
+
+    .timeLabel{
+        font-size: 100px;
+    }
+
+    .itemBox::before{
+        left:5%;
+        width: 90%;
+    }
+}

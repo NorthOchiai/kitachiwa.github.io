@@ -57,7 +57,6 @@ nav{
 .topinfoli{
     position:relative;
     display:inline-block;
-    font-family: "Nico Moji";
     padding-left:20px;
     padding-right:20px;
 }
@@ -66,12 +65,13 @@ nav{
     text-decoration: none;
     color: rgb(255, 200, 134);
     font-size: 24px;
+    font-family: "Nico Moji";
 }
 
 .updatedaybox{
     position:absolute;
+    top:64px;
     right:0;
-    bottom:0;
     margin-right:10px;
 }
 
@@ -106,6 +106,16 @@ nav{
     margin-top:100px;
 }
 
+.heading{
+    text-decoration: underline;
+    color: rgb(255, 200, 134);
+    font-size: 42px;
+    font-family: "Nico Moji";
+    opacity:0;
+    position:relative;
+    bottom:10px;
+}
+
 .introduction{
     display: flex;
     opacity:0;
@@ -131,6 +141,7 @@ nav{
     position:relative;
     margin-left: 30px;
     right:-50%;
+    /*margin-top:20px;*/
 }
 
 .introitem{
@@ -228,14 +239,44 @@ nav{
     opacity: 0;
 }
 
-@media screen and (min-width:880px) {
+.works{
+    position:absolute;
+    background-color: rgba(100,255,100,0.75);
+    width:250px;
+    height: 250px;
+    border-radius: 50%;
+    margin:50px;
+}
+
+.worktitle{
+    color:inherit;
+    text-decoration: none;
+    font-family:'M PLUS Rounded 1c', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    display: block;
+    padding-top:50px;
+    text-align: center;
+}
+
+.workarticle{
+    transform:rotateZ(0.03deg);
+    font-family:'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 90%;
+}
+
+@media screen and (min-width:880px) {       /*PCのみ*/
     #introicon{
         display:block;
     }
 }
 
-@media screen and (max-width:880px) {       /*スマホ*/
-    li{
+@media screen and (max-width:880px) {       /*スマホのみ*/
+    .topinfoli{
         padding-left:10px;
         padding-right:10px;
     }
@@ -262,6 +303,10 @@ nav{
         right:2px;
     }
 
+    .updatedaybox{
+        top:54px;
+    }
+
     .setcenter{
         margin-top:90px;
     }
@@ -281,7 +326,7 @@ nav{
     #introabout{
         margin-left: 0px;
         right:0;
-        top:20%;
+        top:20px;
     }
     
     .introitem{
