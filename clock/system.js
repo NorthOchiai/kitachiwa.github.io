@@ -127,6 +127,10 @@ $(function(){
                 isBigin=Number.isInteger(min/10);
                 isRest=Number.isInteger((min+2)/10);
             break;
+            case "13":
+                isBigin=Number.isInteger(min/15);
+                isRest=Number.isInteger((min+2)/15);
+            break;
             case "15":
                 isBigin=Number.isInteger(min/20);
                 isRest=Number.isInteger((min+5)/20);
